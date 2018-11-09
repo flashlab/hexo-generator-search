@@ -4,7 +4,7 @@
 <% posts.slice(0,limit).each(function(post){ -%>
   <entry>
     <title><%-: post.title | cdata %></title>
-    <url><%- encodeURIComponent(config.root + post.path) %></url>
+    <url><%- config.root + post.path %></url>
     <content type="text"><%-: raw ? post[raw] : post.content | cdata %></content>
 <% if(post.categories&&post.categories.length>0){ -%>
       <categories>
