@@ -1,7 +1,7 @@
 {
   "name": "hexo-generator-searchdb",
-  "version": "1.0.8",
-  "description": "Seach generator plugin for Hexo(modified)",
+  "version": "1.1.0",
+  "description": "Seach generator plugin for Hexo (modified)",
   "main": "index",
   "directories": {
     "lib": "./lib"
@@ -21,9 +21,9 @@
     "utils-merge": "^1.0.0"
   },
   "bugs": {
-    "url": "https://github.com/flashlab/hexo-generator-search/issues"
+    "url": "https://github.com/theme-next/hexo-generator-searchdb/issues"
   },
-  "homepage": "https://github.com/flashlab/hexo-generator-search#readme",
+  "homepage": "https://github.com/theme-next/hexo-generator-searchdb#readme",
   "_npmVersion": "4.0.3",
   "_nodeVersion": "6.10.2",
   "_npmUser": {
@@ -40,6 +40,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/flashlab/hexo-generator-search.git"
+    "url": "git+https://github.com/theme-next/hexo-generator-searchdb.git"
   }
 }
