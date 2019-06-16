@@ -5,7 +5,9 @@
   <entry>
     <title>{{ post.title | noControlChars | striptags | cdata | safe }}</title>
     <url>{{ (config.root + post.path) | urlencode }}</url>
-    <content type="text">{{ post[raw] | default(post.content) | striptags | cdata | safe }}</content>
+    {% if content %}
+      <content type="text">{{ post[raw] | default(post.content) | replace('<td class="gutter">.*?</td>', "", "g") | striptags | cdata | safe }}</content>
+    {% endif %}
     {%- if post.categories and post.categories.length > 0 %}
       <categories>
         {%- for cate in post.categories.toArray() %}
@@ -28,7 +30,9 @@
   <entry>
     <title>{{ page.title | noControlChars | striptags | cdata }}></title>
     <url>{{ (config.root + page.path) | urlencode }}</url>
-      <content type="text">{{ page[raw] | default(page.content) | striptags | cdata }}</content>
+    {% if content %}
+      <content type="text">{{ page[raw] | default(page.content) | replace('<td class="gutter">.*?</td>', "", "g") | striptags | cdata }}</content>
+    {% endif %}
   </entry>
   {%- endfor %}
 {%- endif %}
